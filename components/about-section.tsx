@@ -27,9 +27,9 @@ const values = [
 
 const achievements = [
   { icon: Shield, text: "Đạt chứng nhận ISO 9001:2015" },
-  { icon: Award, text: "Top 10 công ty công nghệ Việt Nam" },
+  { icon: Award, text: "Trúng nhiều gói thầu lớn toàn quốc" },
   { icon: Cpu, text: "Đối tác chiến lược Microsoft, Oracle" },
-  { icon: Users, text: "Hơn 200 khách hàng doanh nghiệp" },
+  { icon: Users, text: "Phục vụ nhiều cơ quan nhà nước" },
 ]
 
 const techStack = [
@@ -84,9 +84,9 @@ export function AboutSection() {
                 </span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Công ty TNHH Công Nghệ 24HCV tự hào là một trong những đơn vị tiên phong 
-                trong lĩnh vực công nghệ thông tin tại Việt Nam. Với hơn 15 năm kinh nghiệm, 
-                chúng tôi đã đồng hành cùng hàng trăm doanh nghiệp trong hành trình chuyển đổi số.
+                Công ty TNHH Công Nghệ 24HCV xin gửi đến Quý khách hàng lời chúc sức khỏe, 
+                thành công và thịnh vượng. Chúng tôi xin cảm ơn Quý khách hàng đã tín nhiệm, 
+                tin dùng và đồng hành cùng sự phát triển của chúng tôi trong thời gian qua.
               </p>
             </div>
 

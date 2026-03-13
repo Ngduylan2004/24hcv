@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Youtube, Mail, Phone, MapPin, ArrowRight, Sparkles } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -103,18 +103,12 @@ export function Footer() {
                 </div>
                 <span>info@24hcv.com</span>
               </a>
-              <a href="tel:+84123456789" className="group flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://24hcv.com" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Phone className="h-4 w-4 text-primary" />
-                </div>
-                <span>0123 456 789</span>
-              </a>
-              <div className="group flex items-start gap-3 text-muted-foreground">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
-                <span>123 Đường XYZ, Quận 1, TP. Hồ Chí Minh</span>
-              </div>
+                <span>www.24hcv.com</span>
+              </a>
             </div>
 
             <div className="flex items-center gap-3">

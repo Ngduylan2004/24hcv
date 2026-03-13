@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react"
 import { Sparkles } from "lucide-react"
 
 const partners = [
-  { name: "Viettel", logo: "VIETTEL" },
-  { name: "VNPT", logo: "VNPT" },
-  { name: "FPT", logo: "FPT" },
-  { name: "Asus", logo: "ASUS" },
+  { name: "Microsoft", logo: "MICROSOFT" },
+  { name: "Oracle", logo: "ORACLE" },
   { name: "HP", logo: "HP" },
   { name: "Kodak", logo: "KODAK" },
   { name: "Avision", logo: "AVISION" },
- 
+  { name: "Dell", logo: "DELL" },
+  { name: "Canon", logo: "CANON" },
+  { name: "Epson", logo: "EPSON" },
 ]
 
 export function PartnersSection() {
@@ -55,9 +55,9 @@ export function PartnersSection() {
             Đối Tác Chiến Lược
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-            Được tin tưởng bởi các{" "}
+            Đối tác công nghệ{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              thương hiệu hàng đầu Việt Nam
+              hàng đầu thế giới
             </span>
           </h3>
         </div>

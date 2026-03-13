@@ -11,20 +11,20 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Địa Chỉ",
-    content: "Tầng 5, Tòa nhà ABC, 123 Đường XYZ, Quận 1, TP. Hồ Chí Minh",
+    content: "Việt Nam",
     gradient: "from-blue-500 to-cyan-400",
   },
   {
     icon: Phone,
     title: "Điện Thoại",
-    content: "0123 456 789 | 0987 654 321",
+    content: "Liên hệ qua form",
     gradient: "from-emerald-500 to-teal-400",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "info@24hcv.com | support@24hcv.com",
-    gradient: "from-violet-500 to-purple-400",
+    content: "info@24hcv.com",
+    gradient: "from-sky-500 to-blue-400",
   },
   {
     icon: Clock,
@@ -155,7 +155,7 @@ export function ContactSection() {
               <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
               
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full border border-border">
-                <p className="text-xs text-muted-foreground">TP. Hồ Chí Minh, Việt Nam</p>
+                <p className="text-xs text-muted-foreground">Việt Nam</p>
               </div>
             </div>
           </div>

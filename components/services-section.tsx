@@ -28,7 +28,7 @@ const services = [
     title: "Số Hóa Tài Liệu",
     description: "Chuyển đổi tài liệu giấy sang định dạng số với độ chính xác cao và bảo mật.",
     features: ["Scan tốc độ cao", "OCR thông minh", "Lưu trữ đám mây", "Truy xuất nhanh chóng"],
-    gradient: "from-violet-500 to-purple-400",
+    gradient: "from-cyan-500 to-blue-400",
   },
   {
     id: "chinh-ly",
@@ -44,7 +44,7 @@ const services = [
     title: "Tu Bổ Tài Liệu",
     description: "Khôi phục và bảo quản tài liệu cũ, hư hỏng theo phương pháp chuyên nghiệp.",
     features: ["Khử axit, nấm mốc", "Gia cố tài liệu", "Đóng lại bìa sách", "Bảo quản dài hạn"],
-    gradient: "from-rose-500 to-pink-400",
+    gradient: "from-amber-500 to-yellow-400",
   },
   {
     id: "thiet-bi",
