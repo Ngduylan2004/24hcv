@@ -8,32 +8,32 @@ const values = [
   {
     icon: Award,
     title: "Chất Lượng Hàng Đầu",
-    description: "Cam kết mang đến sản phẩm và dịch vụ chất lượng cao nhất cho khách hàng.",
-    gradient: "from-amber-500 to-orange-400",
+    description: "Cam kết mang đến sản phẩm và dịch vụ chất lượng cao nhất theo tiêu chuẩn quốc tế.",
+    gradient: "from-amber-600 to-amber-400",
   },
   {
     icon: Users,
     title: "Đội Ngũ Chuyên Nghiệp",
-    description: "Hơn 50 chuyên gia công nghệ với nhiều năm kinh nghiệm trong ngành.",
-    gradient: "from-blue-500 to-cyan-400",
+    description: "Hơn 50 chuyên gia công nghệ với nhiều năm kinh nghiệm trong ngành CNTT.",
+    gradient: "from-blue-600 to-blue-400",
   },
   {
     icon: Target,
     title: "Tập Trung Khách Hàng",
-    description: "Luôn đặt lợi ích của khách hàng lên hàng đầu trong mọi quyết định.",
-    gradient: "from-emerald-500 to-teal-400",
+    description: "Luôn đặt lợi ích của khách hàng lên hàng đầu trong mọi quyết định kinh doanh.",
+    gradient: "from-emerald-600 to-emerald-400",
   },
 ]
 
 const achievements = [
-  { icon: Shield, text: "Đạt chứng nhận ISO 9001:2015" },
-  { icon: Award, text: "Top 10 công ty công nghệ Việt Nam" },
-  { icon: Cpu, text: "Đối tác chiến lược Microsoft, Oracle" },
-  { icon: Users, text: "Hơn 200 khách hàng doanh nghiệp" },
+  { icon: Shield, text: "Chứng nhận ISO 9001:2015" },
+  { icon: Award, text: "Công ty công nghệ hàng đầu Việt Nam" },
+  { icon: Cpu, text: "Hệ thống công nghệ hiện đại" },
+  { icon: Users, text: "Hơn 200 khách hàng đã tin tưởng" },
 ]
 
 const techStack = [
-  "React", "Next.js", "Node.js", "Python", "AWS", "Azure", "Docker", "Kubernetes"
+  "Phần mềm tùy chỉnh", "Ứng dụng Web", "Ứng dụng Mobile", "Số hóa tài liệu", "Lưu trữ đám mây", "Quản lý hồ sơ", "OCR thông minh", "Bảo mật dữ liệu"
 ]
 
 export function AboutSection() {
@@ -86,7 +86,8 @@ export function AboutSection() {
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Công ty TNHH Công Nghệ 24HCV tự hào là một trong những đơn vị tiên phong 
                 trong lĩnh vực công nghệ thông tin tại Việt Nam. Với hơn 15 năm kinh nghiệm, 
-                chúng tôi đã đồng hành cùng hàng trăm doanh nghiệp trong hành trình chuyển đổi số.
+                chúng tôi đã đồng hành cùng hàng trăm tổ chức, doanh nghiệp và cơ quan chính phủ 
+                trong hành trình chuyển đổi số và hiện đại hóa hệ thống thông tin.
               </p>
             </div>
 

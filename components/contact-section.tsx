@@ -11,26 +11,26 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Địa Chỉ",
-    content: "Tầng 5, Tòa nhà ABC, 123 Đường XYZ, Quận 1, TP. Hồ Chí Minh",
-    gradient: "from-blue-500 to-cyan-400",
+    content: "1500 Broadway #500, NY 10018, New York",
+    gradient: "from-blue-600 to-blue-400",
   },
   {
     icon: Phone,
     title: "Điện Thoại",
-    content: "0123 456 789 | 0987 654 321",
-    gradient: "from-emerald-500 to-teal-400",
+    content: "+1 234 567 89",
+    gradient: "from-emerald-600 to-emerald-400",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "info@24hcv.com | support@24hcv.com",
-    gradient: "from-violet-500 to-purple-400",
+    content: "info@flatsome.com",
+    gradient: "from-violet-600 to-violet-400",
   },
   {
     icon: Clock,
     title: "Giờ Làm Việc",
     content: "Thứ 2 - Thứ 6: 8:00 - 17:30",
-    gradient: "from-orange-500 to-amber-400",
+    gradient: "from-orange-600 to-orange-400",
   },
 ]
 

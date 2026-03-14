@@ -13,9 +13,10 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Công ty TNHH Công Nghệ 24HCV',
-  description: 'Công ty TNHH Công Nghệ 24HCV - Chuyển đổi số, số hóa tài liệu, chỉnh lý lưu trữ và cung cấp thiết bị CNTT hàng đầu Việt Nam',
+  title: 'Công ty TNHH Công Nghệ 24HCV | Chuyển Đổi Số & Số Hóa Tài Liệu',
+  description: 'Công ty TNHH Công Nghệ 24HCV - Giải pháp phần mềm, chuyển đổi số, số hóa tài liệu, chỉnh lý lưu trữ và cung cấp thiết bị CNTT hàng đầu Việt Nam. Hơn 15 năm kinh nghiệm, hơn 200 khách hàng tin tưởng.',
   generator: '24HCV',
+  keywords: 'chuyển đổi số, số hóa tài liệu, phần mềm, lưu trữ điện tử, 24HCV, Việt Nam',
   icons: {
     icon: [
       {

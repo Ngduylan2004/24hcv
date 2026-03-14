@@ -19,19 +19,24 @@ const features = [
 
 const slides = [
   {
-    title: "Chuyển Đổi Số",
-    highlight: "Thông Minh",
-    description: "Nâng tầm doanh nghiệp với các giải pháp công nghệ tiên tiến, đưa bạn vào kỷ nguyên số hóa toàn diện.",
+    title: "Chuyển Đổi",
+    highlight: "Số Thành Công",
+    description: "Nâng tầm doanh nghiệp với các giải pháp công nghệ tiên tiến, đưa tổ chức bạn vào kỷ nguyên số hóa toàn diện.",
   },
   {
     title: "Giải Pháp",
-    highlight: "Phần Mềm",
-    description: "Phát triển ứng dụng tùy chỉnh, tối ưu quy trình làm việc và tăng hiệu suất kinh doanh.",
+    highlight: "Phần Mềm Toàn Diện",
+    description: "Phát triển ứng dụng tùy chỉnh, tối ưu quy trình làm việc và tăng hiệu suất kinh doanh cho doanh nghiệp.",
   },
   {
-    title: "Số Hóa",
-    highlight: "Tài Liệu",
+    title: "Số Hóa &",
+    highlight: "Lưu Trữ Tài Liệu",
     description: "Chuyển đổi kho tài liệu giấy sang định dạng số với độ chính xác cao và bảo mật tuyệt đối.",
+  },
+  {
+    title: "Chỉnh Lý",
+    highlight: "& Tu Bổ Chuyên Nghiệp",
+    description: "Sắp xếp, phân loại và bảo quản tài liệu lưu trữ theo tiêu chuẩn quốc gia với chất lượng tốt nhất.",
   },
 ]
 
@@ -183,7 +188,7 @@ export function HeroSection() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium backdrop-blur-sm animate-glow">
               <Sparkles className="w-4 h-4 animate-pulse" />
-              <span>Công ty Công nghệ hàng đầu Việt Nam</span>
+              <span>Công ty Công Nghệ 24HCV - Hàng đầu Việt Nam</span>
               <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
             </div>
             
