@@ -186,10 +186,10 @@ export function HeroSection() {
             }`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium backdrop-blur-sm animate-glow">
-              <Sparkles className="w-4 h-4 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium backdrop-blur-sm hover-shadow animate-fade-in-down stagger-1">
+              <Sparkles className="w-4 h-4 animate-float" />
               <span>Công ty Công Nghệ 24HCV - Hàng đầu Việt Nam</span>
-              <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             </div>
             
             {/* Slider content */}
@@ -197,11 +197,12 @@ export function HeroSection() {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-all duration-700 ${
+                  className={`absolute inset-0 transition-all duration-700 cubic-bezier-in-out ${
                     currentSlide === index
                       ? "opacity-100 translate-y-0 scale-100"
-                      : "opacity-0 translate-y-4 scale-95 pointer-events-none"
+                      : "opacity-0 translate-y-8 scale-90 pointer-events-none"
                   }`}
+                  style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
                 >
                   <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight">
                     {slide.title}{" "}
@@ -220,23 +221,24 @@ export function HeroSection() {
             </div>
 
             {/* Slide indicators */}
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center animate-fade-in-up stagger-2">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`relative h-2 rounded-full transition-all duration-500 overflow-hidden ${
+                  className={`relative h-2 rounded-full transition-all duration-500 overflow-hidden hover-scale ${
                     currentSlide === index
-                      ? "w-12 bg-primary/30"
-                      : "w-3 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                      ? "w-12 bg-primary/50 shadow-lg shadow-primary/30"
+                      : "w-3 bg-muted-foreground/30 hover:bg-muted-foreground/60 hover:shadow-md hover:shadow-muted-foreground/20"
                   }`}
+                  style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
                 >
                   {currentSlide === index && (
-                    <div className="absolute inset-y-0 left-0 bg-primary rounded-full animate-progress" />
+                    <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary to-accent rounded-full animate-progress" />
                   )}
                 </button>
               ))}
-              <span className="text-sm text-muted-foreground ml-2">0{currentSlide + 1} / 0{slides.length}</span>
+              <span className="text-sm text-muted-foreground ml-2 font-medium">0{currentSlide + 1} / 0{slides.length}</span>
             </div>
 
             {/* Features */}
@@ -244,35 +246,38 @@ export function HeroSection() {
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className={`group flex items-center gap-4 p-3 rounded-xl bg-card/30 backdrop-blur-sm border border-transparent hover:border-primary/30 transition-all duration-500 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-card/50 to-card/30 backdrop-blur-sm border border-primary/10 hover:border-primary/40 hover-lift ${
+                    isVisible ? "opacity-100 translate-x-0 animate-fade-in-left" : "opacity-0 -translate-x-4"
                   }`}
-                  style={{ transitionDelay: `${index * 150 + 300}ms` }}
+                  style={{ 
+                    transitionDelay: `${index * 150 + 300}ms`,
+                    animationDelay: isVisible ? `${index * 100}ms` : '0ms'
+                  }}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <feature.icon className="h-5 w-5 text-primary" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-accent/20 border border-primary/40 flex items-center justify-center group-hover:scale-125 group-hover:rotate-6 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/40">
+                    <feature.icon className="h-5 w-5 text-primary group-hover:text-accent transition-colors duration-300" />
                   </div>
-                  <span className="text-foreground font-medium group-hover:text-primary transition-colors">{feature.text}</span>
+                  <span className="text-foreground font-medium group-hover:text-primary transition-colors duration-300">{feature.text}</span>
                 </div>
               ))}
             </div>
             
             {/* CTA Buttons */}
             <div 
-              className={`flex flex-col sm:flex-row gap-4 pt-4 transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              className={`flex flex-col sm:flex-row gap-4 pt-4 transition-all duration-700 animate-fade-in-up ${
+                isVisible ? "opacity-100 translate-y-0 stagger-3" : "opacity-0 translate-y-4"
               }`}
-              style={{ transitionDelay: "600ms" }}
+              style={{ transitionDelay: "600ms", transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
             >
-              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg h-14 px-8">
+              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary via-accent to-primary hover:shadow-2xl hover:shadow-primary/50 text-lg h-14 px-8 hover-lift font-semibold">
                 <span className="relative z-10 flex items-center">
                   Khám Phá Ngay
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
               </Button>
-              <Button size="lg" variant="outline" className="group border-border hover:border-primary/50 hover:bg-primary/5 text-lg h-14 px-8">
-                <Play className="mr-2 h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
+              <Button size="lg" variant="outline" className="group border-primary/30 hover:border-primary hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:shadow-lg hover:shadow-primary/20 text-lg h-14 px-8 hover-lift font-semibold">
+                <Play className="mr-2 h-5 w-5 text-primary group-hover:scale-125 group-hover:animate-pulse transition-all duration-300" />
                 Xem Video
               </Button>
             </div>

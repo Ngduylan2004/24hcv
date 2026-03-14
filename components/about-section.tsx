@@ -68,13 +68,14 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div 
-            className={`space-y-8 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            className={`space-y-8 transition-all duration-700 animate-fade-in-left ${
+              isVisible ? "opacity-100 translate-x-0 stagger-1" : "opacity-0 -translate-x-10"
             }`}
+            style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
           >
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6 hover-shadow animate-pulse">
+                <Sparkles className="w-4 h-4 animate-float" />
                 Về Chúng Tôi
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -96,12 +97,15 @@ export function AboutSection() {
               {values.map((value, index) => (
                 <div 
                   key={index} 
-                  className={`group flex gap-4 p-4 rounded-xl bg-card/50 border border-border hover:border-primary/30 transition-all duration-500 hover:shadow-lg hover:shadow-primary/5 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                  }`}
-                  style={{ transitionDelay: `${index * 150 + 200}ms` }}
+                  className={`group flex gap-4 p-4 rounded-xl bg-gradient-to-r from-card/60 to-card/30 border border-primary/10 hover:border-primary/40 hover-lift transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 animate-fade-in-up ${
+                    isVisible ? "opacity-100 translate-y-0 stagger-" : "opacity-0 translate-y-4"
+                  }${index + 2}`}
+                  style={{ 
+                    transitionDelay: `${index * 150 + 200}ms`,
+                    animationDelay: isVisible ? `${index * 100}ms` : '0ms'
+                  }}
                 >
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center flex-shrink-0 group-hover:scale-125 group-hover:rotate-3 transition-all duration-300 shadow-lg group-hover:shadow-lg group-hover:shadow-primary/30`}>
                     <value.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>

@@ -87,12 +87,13 @@ export function ServicesSection() {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div 
-          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-700 animate-fade-in-down ${
+            isVisible ? "opacity-100 translate-y-0 stagger-1" : "opacity-0 translate-y-10"
           }`}
+          style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6 hover-shadow animate-pulse">
+            <Sparkles className="w-4 h-4 animate-float" />
             Dịch Vụ Của Chúng Tôi
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
@@ -113,20 +114,24 @@ export function ServicesSection() {
             <Card 
               key={service.id} 
               id={service.id}
-              className={`group relative bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`group relative bg-gradient-to-br from-card/60 to-card/30 backdrop-blur-md border border-primary/10 hover:border-primary/40 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 hover-lift ${
+                isVisible ? "opacity-100 translate-y-0 animate-fade-in-up" : "opacity-0 translate-y-10"
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                animationDelay: isVisible ? `${index * 80}ms` : '0ms',
+                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
             >
               {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-8 transition-opacity duration-500`} />
               
               {/* Top accent line */}
-              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left`} />
               
               <CardHeader className="pb-4 relative">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
-                  <service.icon className="h-7 w-7 text-white" />
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/40`}>
+                  <service.icon className="h-7 w-7 text-white animate-fade-in-up" />
                 </div>
                 <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
@@ -147,11 +152,11 @@ export function ServicesSection() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="ghost" className="w-full group/btn mt-4 hover:bg-primary/10">
-                  <span className="text-muted-foreground group-hover/btn:text-primary transition-colors">
+                <Button variant="ghost" className="w-full group/btn mt-4 hover:bg-gradient-to-r hover:from-primary/20 hover:to-accent/10 transition-all duration-300">
+                  <span className="text-muted-foreground group-hover/btn:text-primary transition-all duration-300 font-medium">
                     Tìm Hiểu Thêm
                   </span>
-                  <ArrowRight className="ml-2 h-4 w-4 text-muted-foreground group-hover/btn:text-primary group-hover/btn:translate-x-1 transition-all" />
+                  <ArrowRight className="ml-2 h-4 w-4 text-muted-foreground group-hover/btn:text-primary group-hover/btn:translate-x-2 transition-all duration-300" />
                 </Button>
               </CardContent>
               

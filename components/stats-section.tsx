@@ -125,17 +125,21 @@ export function StatsSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/30 text-center transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className={`group relative p-6 rounded-2xl bg-gradient-to-br from-card/60 to-card/30 backdrop-blur-md border border-primary/10 hover:border-primary/40 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-primary/15 hover-lift animate-fade-in-up ${
+                isVisible ? "opacity-100 translate-y-0 stagger-" : "opacity-0 translate-y-10"
+              }${index + 1}`}
+              style={{ 
+                transitionDelay: `${index * 100}ms`,
+                animationDelay: isVisible ? `${index * 80}ms` : '0ms',
+                transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
             >
               {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Icon */}
-              <div className={`w-14 h-14 mx-auto rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
-                <stat.icon className="w-7 h-7 text-white" />
+              <div className={`w-14 h-14 mx-auto rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/40`}>
+                <stat.icon className="w-7 h-7 text-white animate-fade-in-up" />
               </div>
 
               {/* Value */}
